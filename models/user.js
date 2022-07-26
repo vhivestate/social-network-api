@@ -14,21 +14,23 @@ const UserSchema = new Schema(
             required: [true, "Email is required"],
             unique: [true, "Email already being used"],
         },
-        thoughts: [
-                {
-                    ref: 'Thoughts'
-               }
-        ],
-        friends: [
-            {
-                ref: 'Thoughts'
-            }
-        ],
-        toJson: {
-            virtuals: true,
-            getters: true,
-        },
-        id: false,
+        // thoughts: [
+        //         {
+        //             type: Schema.Types.ObjectId,
+        //             ref: 'Thought'
+        //        }
+        // ],
+        // friends: [
+        //     {
+        //         type: Schema.Types.ObjectId,
+        //         ref: 'User'
+        //     }
+        // ],
+        // toJson: {
+        //     virtuals: true,
+        //     getters: true,
+        // },
+        // id: false,
     }
 );
 
@@ -37,14 +39,4 @@ const User = model("User", UserSchema);
 
 module.exports = User;
 
-
-thoughts
-//[] of _id val referencing thought model
-friends
-//[] of _id val referencing thought model
-
-
-//Schema Settings
-
-//Create a virtual called friendCount that retrieves the length of the user's friends array field on query.
 
