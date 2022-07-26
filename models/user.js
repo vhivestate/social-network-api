@@ -1,14 +1,42 @@
-username
-    String
-    Unique
-    Required
-    trimmed
+const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
-email
-    String
-    Unique
-    Required
-// Must match a valid email address (look into Mongoose's matching validation)
+const UserSchema = new Schema(
+    {
+        username: {
+            type: String,
+            required: [true, "Username is required"],
+            unique: [true, "Username already taken"],
+            trim: true,
+        },
+        email: {
+            type: String,
+            required: [true, "Email is required"],
+            unique: [true, "Email already being used"],
+        },
+        thoughts: [
+                {
+                    ref: 'Thoughts'
+               }
+        ],
+        friends: [
+            {
+                ref: 'Thoughts'
+            }
+        ],
+        toJson: {
+            virtuals: true,
+            getters: true,
+        },
+        id: false,
+    }
+);
+
+  // create the user model using the UserSchema
+const User = model("User", UserSchema);
+
+module.exports = User;
+
 
 thoughts
 //[] of _id val referencing thought model
