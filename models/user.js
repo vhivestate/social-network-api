@@ -5,14 +5,14 @@ const UserSchema = new Schema(
     {
         username: {
             type: String,
-            required: [true, "Username is required"],
-            unique: [true, "Username already taken"],
-            trim: true,
+            required: true,
+            unique: true,
+            trim: true
         },
         email: {
             type: String,
-            required: [true, "Email is required"],
-            unique: [true, "Email already being used"],
+            required: true,
+            unique: true,
         },
         // thoughts: [
         //         {

@@ -10,13 +10,13 @@ const {
 
 // Set up GET all and POST at /api/users
 router
-  .route('/users')
+  .route('/')
   .get(getAllUser)
   .post(createUser);
 
 // Set up GET one, PUT, and DELETE at /api/user/:id
 router
-  .route('/user/:id')
+  .route('/:id')
   .get(getUserById)
   .put(updateUser)
   .delete(deleteUser);
