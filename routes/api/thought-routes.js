@@ -9,12 +9,12 @@ const {
 
 // /api/Thoughts/<pizzaId>
 router
-.route('/thought')
+.route('/')
 .post(addThought);
 
 // /api/Thoughts/<pizzaId>/<ThoughtId>
 router
-  .route('/:id/:thoughtId')
+  .route('/:thoughtId')
 //   .put(updateThought)
   .delete(removeThought);
 
