@@ -24,7 +24,10 @@ router
 
 router
 .route('/:thoughtId/reaction')
-.post(addReaction)
+.post(addReaction);
+
+router 
+.route('/:thoughtId/reaction/:reactionId')
 .delete(removeReaction);
 
 // /api/Thoughts/<pizzaId>/<ThoughtId>

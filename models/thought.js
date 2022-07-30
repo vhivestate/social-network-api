@@ -45,12 +45,6 @@ const ThoughtSchema = new Schema(
             // max: 280,
             // min: 1
         },
-
-        // createdAt: {
-        //     type: Date,
-        //     default: Date.now,
-        //     // get: createdAtVal => dateFormat(createdAtVal)
-        // },
         reactions: [ReactionSchema],
 
         // toJson: {

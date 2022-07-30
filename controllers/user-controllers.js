@@ -72,6 +72,24 @@ const userController = {
             res.json(dbData)
         })
       },
+
+      removeFriend({ params }, res) {
+        console.log(params);
+            User.findOneAndUpdate(
+              { _id: params.userId },
+              { $pull: { friends: params.friendId
+              } },
+              { new: true }
+            )
+          .then(userData => {
+            if (!userData) {
+              res.status(404).json({ message: 'No reaction found with this id!' });
+              return;
+            }
+            res.json(userData);
+          })
+          .catch(err => res.json(err));
+      }
   };
 
   
