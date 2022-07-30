@@ -17,26 +17,26 @@ const thoughtController = {
           });
       },
 
-      getPizzaById({ params }, res) {
-        Pizza.findOne({ _id: params.id })
+      getThoughtById({ params }, res) {
+        Thought.findOne({ _id: params.thoughtId })
           .populate({
-            path: 'comments',
+            path: 'username',
             select: '-__v'
           })
           .select('-__v')
-          .then(dbPizzaData => {
-            if (!dbPizzaData) {
-              res.status(404).json({ message: 'No pizza found with this id!' });
+          .then(dbData => {
+            if (!dbData) {
+              res.status(404).json({ message: 'No thought found with this id!' });
               return;
             }
-            res.json(dbPizzaData);
+            res.json(dbData);
           })
           .catch(err => {
             console.log(err);
             res.status(400).json(err);
           });
       },
-      
+
   // add thought to user
   addThought({ body}, res) {
     console.log(body);
