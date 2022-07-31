@@ -6,7 +6,6 @@ The point this project is to build an API for a social network application using
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Lisence](#lisence)
 - [Contributions](#contributions)
 
 ## Installation
@@ -14,9 +13,6 @@ In order to install project clone repo [on my Github](https://github.com/vhivest
 
 ## Usage
 Users will be able to be created, updated, and deleted. You will also be able to see all users or pick one by id. Users will be able to add friends and delete friends. Users will also have the capability of creating, deleting, and looking at thoughts. Users and friends will also be able to add reactions to thoughts as well as delete reactions.
-
-## License
-MIT
 
 ## Contributing 
 I got help from my tutors and TA's
