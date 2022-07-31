@@ -13,7 +13,7 @@ The point this project is to build an API for a social network application using
 In order to install project clone repo [on my Github](https://github.com/vhivestate/social-network-api) and run npm install mongoose then run npm start.
 
 ## Usage
-User can add departments, employees, and roles. Users can also update employee roles.
+Users will be able to be created, updated, and deleted. You will also be able to see all users or pick one by id. Users will be able to add friends and delete friends. Users will also have the capability of creating, deleting, and looking at thoughts. Users and friends will also be able to add reactions to thoughts as well as delete reactions.
 
 ## License
 MIT
